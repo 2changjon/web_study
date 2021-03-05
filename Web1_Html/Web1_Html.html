@@ -1,0 +1,140 @@
+<!---->
+<!--ctrl+alt+b 자동 정렬-->
+<!DOCTYPE html><!--이문서는 html이다-->
+<html>
+  <head><!--본문을 설명-->
+    <title>WEB1-HTML & Internet</title><!--본문제목-->
+    <meta charset="utf-8"><!-- charset 문자 규칙(해당 규칙으로 읽어라)-->
+  </head>
+
+  <body><!--본문-->
+
+    <h1><!--제목 크기 1-->
+      <a href="index.html" style="color:black; text-decoration:none;" id="top">
+        WEB
+      </a>
+    </h1>
+
+    <ol><!--숫자 목차-->
+      <li><a href="#html">HTML</a> & <a href="#internet">Internet</a></li><!--리스트-->
+      <li><a href="../Web2_Css/Web2_Css.html">CSS</a></li>
+      <li><a href="../Web2_JavaScript/Web2_JavaScript.html">JavaScript</a></li>
+    </ol>
+
+    <ul><!--목록(목차) 숫자없음-->
+      <li>기타</li><!--리스트-->
+    </ul>
+
+    <h2 id="html"><!--제목 크기 2-->
+      <a href="#top">
+        HTML
+      </a>
+    </h2>
+
+    <p><!--단락-->
+      Hypertext Markup Language (HTML) is the standard markup language for
+      <strong><!--진한글씨-->
+        creating
+        <u><!--밑줄-->
+          web
+        </u>
+        pages
+      </strong>
+      and web applications.Web browsers receive HTML documents from a web server or from local storage and render them into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the
+      appearance of the document.
+    </p>
+    <br><!--줄바꿈-->
+    <p>
+      HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects, such as interactive forms, may be embedded into the  rendered page. It provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets.
+    </p>
+    <!--p 단락이라 고정적인 여백이 벌어지는 단점있음-->
+    <!--br 줄바꿈이라 여러번 사용 가능-->
+    <!--의미에 맞는것을 사용할 것-->
+
+    <!--unsplash.com 무료이미지 사이트(저작권에 구애받지않음)-->
+
+    <img src="img/123.jpg" alt="사진없음" width="100%"><!--이미지 삽입. src는 경로 alt는 사진이 없을시 출력할 메시지-->
+
+    <a href="http://www.naver.com" target="_blank" title="naver.com" style="text-decoration:none"><!--앵커라고 하며 즉 링크와 같다.-->
+      <!--href는 경로를 의미한다-->
+      <!--target은 해당 링크를 어떻게 할지를 결정하며 _blank는 새탭을 연다-->
+      <!--title은 해당 링크에 마우스를 올려둘시 나오는 메시지 설정-->
+      <!--stlye은 앵커의 스타일을 설정 text-decoration:none은 밑줄 제거-->
+      naver로 이동하기
+    </a>
+
+    <h4>
+      부록<h6>만들어져있는 기능 사용하기</h6> <!--해당 기능을 사용할려면 file://이 아닌 web serber통해 페이지를 열어야지 사용 가능-->
+    </h4>
+
+    <p>
+      1. 동영상 삽입 <br>
+      1-1. 유튜브 공유 퍼가기 코드 복붙<br>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/7T7r_oSp0SE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+      2.댓글기능 추가<br> <!---->
+      2-1. disqus에 로그인해서 admin 접속 your sites에 new site로 추가<br>
+      2-2. universal code 클 후 코드 복붙<br>
+      3. 채팅기능 추가<br>
+      3-1. tawk에 로그인 후 관리자 화면의 widget code에 있는 코드 복붙<br>
+      4. 웹사이트 방문자 분석기<br>
+      4-1. analytics.google.com에 로그인 후 설정
+      4-2. tracking code에 있는 global site tag 코드 복붙
+    </p>
+
+    <h2 id="internet">
+      <a href="#top">
+        Internet
+      </a>
+    </h2>
+
+    <!-- <pre> tag 는 강의에 나오지 않았으나 알고있으면 좋음-->
+    <!-- pre는 입련된 값 그대로 화면에 출력한다.-->
+    <!-- 즉 줄바꿈을 안해줘도됨 다만 <p> tag와는 다르게 스타일이 없음 -->
+
+    <h4>server와 client</h4>
+
+    <p>
+      client는 server에 requset(리퀘스트-의뢰)하고 server는 client에게 response(리스폰스-응답)한다.
+      <br>
+      html에서는 client는 Web Browser이며 server는 Web Server이다
+    </p>
+
+    <h4>웹 호스팅-github page</h4>
+
+    <p>
+      순서<br>
+      1. gighub에서 repository를 생성<br>
+      2. 소스 코드를 업로드<br>
+      3. srttings에서 github pages에 있는 source를 master branch로 변경 후 저장<br>
+      4. github에서 url를 제공<br>
+    </p>
+
+    <h4>웹 서버 설치하기(window)</h4>
+
+    <p>
+      해당 강의에서는 웹 서버로 apache를 사용했습니다.<br>
+      <!--how to easy install apache on window로 검색 후
+      downloading apache for windows에 있는 거 사용하면 됨 -->
+      순서<br>
+      1. bitnami wamp stack로 검색 후 파일 다운로드<br>
+      2. 설치를 할 때 PhpMyadmin만 체크 후 설치<br>
+      <!--설치 위치 알고있으면 좋고 MySQL root pw 설정할 때 pw 기억하기(rㅐㅐtaㅇmㅑn)-->
+      3. bitnami wamp stack manager tool 실행<br>
+      4. go to application 클릭해서 사이트가 정상적으로 뜨면 설치 완료<br>
+      <!--http://127.0.0.1/index.html 를 입력해서 같은 화면 나와야됨-->
+    </p>
+
+    <h4>bitnami wamp stack(web serber) 활용</h4>
+
+    <p>
+      순서<br>
+      1. bitnami wamp stack 설치 위치에서 apache2폴더 안의 htdocs(Hypertext Document) 폴더로 이동<br>
+      <!--http://127.0.0.1/index.html 에서 index.html 파일이 위치한 폴더임 -->
+      2. htdocs 폴더 내부 파일 삭제 후 보여주고 싶은 html 관련 파일들 복붙
+      <!--http:// 와 file:// 의 차이점-->
+      <!--http:// 은 web browsers가 web server에 index.html을 요청하면 web serber가 local에서 idex.html을 읽어와 web browsers에 응답하는 것-->
+      <!--file:// 은 web browser가 local의 index.html를 바로 읽어오는 것-->
+    </p>
+
+  </body>
+</html>
