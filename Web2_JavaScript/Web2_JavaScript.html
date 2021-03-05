@@ -10,7 +10,7 @@
   <body>
 
     <h1>
-      <a href="index.html" style="color:black; text-decoration:none;" id="top">
+      <a href="index.html">
         WEB
       </a>
     </h1>
@@ -22,9 +22,129 @@
       <li><a href="../Web2_JavaScript/Web2_JavaScript.html">JavaScript</a></li>
     </ol>
 
-    <ul>
-      <li>기타</li>
-    </ul>
+    <input type="button" value="hi" onclick="alert('hi')"><!-- 입력 tag로 type에 따라 입력 받을수 있는 형태가 변함 -->
+    <!-- value은 값인 경우도 있지만 type button 같이 button의 이름인 경우가 있다-->
+    <!-- onclick 은 해당 타입을 눌렀을 때 일어나는 행위를 설정-->
+    <!-- alert 는 경고창을 띄우는 JavaScript로 확인 버튼만 있으며 경고창에 띄 울 메시지를 입력할 수 있음-->
+
+    <input type="text" onchange="alert('change')">
+    <!-- onchange 는 해당 tag에서 어떠한 변화가 생기면 발생시키는 행위를 설정-->
+
+    <input type="text" onkeydown="alert('key down')">
+    <!-- onkeydown 은 해당 tag에서 값을 입력하면 발생하는 행위-->
+
+    <input type="button" value="night" onclick="document.body.style.backgroundColor='black';document.body.style.color='white'">
+    <!-- document.body.style.color 는 document(문서) 내 body의 style에서 color를 설정하겠다라는 의미-->
+    <input type="button" value="day" onclick="document.body.style.backgroundColor='white';document.body.style.color='black'">
+
+    <input type="button" value="낮" onclick="
+    var dayily = document.querySelector('body').style;
+
+    if(this.value === '낮'){
+      dayily.backgroundColor='white';
+      dayily.color='black';
+      this.value = '밤';
+
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i<alist.length){
+        console.log(alist[i]);
+        alist[i].style.color='blue';
+        i=i+1;
+      }
+
+    } else {
+      dayily.backgroundColor='black';
+      dayily.color='white';
+      this.value = '낮';
+
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i<alist.length){
+        console.log(alist[i]);
+        alist[i].style.color='red';
+        i=i+1;
+      }
+    }
+    ">
+    <!-- querySelector('') 는 해당 tag를 찾는 JavaScript -->
+    <!-- querySelectorAll('') 는 해당 tag를 전부 찾는 JavaScript로 여러번 쓰는 tag를 한 번에 조작 가능 -->
+    <!-- console.log 는 console 창에 log를 찍어주는 JavaScript -->
+
+    <input type="button" value="night" onclick="four()">
+    <!-- four() 은 javascript에서 만든 function의 name으로 해당 function의 내용을 실행하겠다는 의미 -->
+    <script type="text/javascript">
+
+      document.write(1===2); // document(문서)에 wrtie(쓰다) 1 과 2가 같은 지
+
+      function one() { // function(함수)name을 입력시 해당 내부 내용이 실행
+        document.write('<li> hi </li>');
+      }
+      one();
+
+      function two(a,b){
+        document.write(a+b+'<br>');
+      }
+      two(2,3);
+
+      function three(a,b){
+        document.write('<div style="color:red">'+a+b+'</div>');
+        document.write('<div style="font-size:30px">'+a*b+'</div><br>');
+      }
+      three(4,5);
+
+      function four(){
+        var dayily = document.querySelector('body').style;
+
+        if(this.value === 'day'){
+          dayily.backgroundColor='white';
+          dayily.color='black';
+          this.value = 'night';
+
+          var alist = document.querySelectorAll('a');
+          var i = 0;
+          while(i<alist.length){
+            console.log(alist[i]);
+            alist[i].style.color='blue';
+            i=i+1;
+          }
+
+        } else {
+          dayily.backgroundColor='black';
+          dayily.color='white';
+          this.value = 'day';
+
+          var alist = document.querySelectorAll('a');
+          var i = 0;
+          while(i<alist.length){
+            console.log(alist[i]);
+            alist[i].style.color='red';
+            i=i+1;
+          }
+        }
+      }
+
+      var five ={
+        "name" : "hello",
+        "value" : "JavaScript"
+      };
+      document.write("name : "+five.name+'<br>'); // five라는 객체에서 name의 값을 가져오겠다
+      five["echo"]="hi"; // five 객체에 echo라는 key에다가 hi라는 값을 저장하겠다
+      document.write("echo : "+five["echo"]+'<br>');
+      five.id ="Web"; // five 객체에 id라는 key에다가 Web라는 값을 저장하겠다
+
+      for(var key in five){ // key에 five 객체의 key 값들을 삽입
+        document.write("key : "+key+" / value : "+five[key]+'<br>');
+      }
+
+      five.showall = function(){
+        for(var key in this){
+          document.write("key : "+key+" / value : "+this[key]+'<br>');
+        }
+      }
+      five.showall();
+
+    </script>
 
   </body>
 </html>
